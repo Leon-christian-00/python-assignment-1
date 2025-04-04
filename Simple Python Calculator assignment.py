@@ -1,24 +1,22 @@
 # Simple Python Calculator
 
 # Step 1: Take input from the user
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the second number: "))
-operation = input("Enter the operation (+, -, *, /): ")
+a = int(input("enter your first number:"))
+b = int(input("enter your second number:"))
+op = input("choose your operation : + , - , / , * :")
 
-# Step 2: Perform the operation based on user input
-if operation == "+":
-    result = num1 + num2
-elif operation == "-":
-    result = num1 - num2
-elif operation == "*":
-    result = num1 * num2
-elif operation == "/":
-    if num2 != 0:  # Check for division by zero
-        result = num1 / num2
-    else:
-        result = "Error: Division by zero is not allowed."
+# Step 2: Perform the operation based on user input & Print the result
+if op == "+":
+    res = int(a + b)
+    print(f"the result of: {a} {op} {b} = {res}")
+elif op == "-":
+    res = int(a - b)
+    print(f"the result of: {a} {op} {b} = {res}")
+elif op == "*":
+    res = int(a * b)
+    print(f"the result of: {a} {op} {b} = {res}")
+elif op == "/":
+    res = int(a // b)
+    print(f"the result of: {a} {op} {b} = {res}")
 else:
-    result = "Invalid operation. Please enter one of +, -, *, /."
-
-# Step 3: Print the result
-print(f"{num1} {operation} {num2} = {result}")
+    print(f"wrong operation")
